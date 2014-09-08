@@ -14,4 +14,16 @@ Feature: Testing of vmilosti
     Then I should see "Таркаси"
 
 	Scenario: Test of vmilist deletion
+		Given I have vmilosti called "Кінна"
+		And I am on vmilosti list page
+    When I click on link "Destroy"
+    Then I should not see "Кінна"
+
 	Scenario: Test of vmilist edition
+		Given I have vmilosti called "Кінна"
+		And I am on vmilosti list page
+    When I click on link "Edit"
+    And I fill in vmilist name with "Змінена назва"
+    And I click on button "Update Vmilist"
+    Then I am on vmilosti list page
+    And I should see "Змінена назва"

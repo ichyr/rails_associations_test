@@ -11,6 +11,12 @@ Then(/^I should see (.*?)$/) do |data|
   }
 end
 
+Then(/^I should not see (.*?)$/) do |data|
+  data.tr('"','').split(", ").each { |text|
+  	expect(page).not_to have_text text
+  }
+end
+
 Given(/^I am on vmilosti list page$/) do
   visit "/vmilists"
 end
