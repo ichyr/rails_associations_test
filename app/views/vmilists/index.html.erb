@@ -1,0 +1,25 @@
+<h1>Listing vmilists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vmilists.each do |vmilist| %>
+      <tr>
+        <td><%= vmilist.name %></td>
+        <td><%= link_to 'Show', vmilist %></td>
+        <td><%= link_to 'Edit', edit_vmilist_path(vmilist) %></td>
+        <td><%= link_to 'Destroy', vmilist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vmilist', new_vmilist_path %>
