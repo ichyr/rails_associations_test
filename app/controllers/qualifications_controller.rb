@@ -15,6 +15,8 @@ class QualificationsController < ApplicationController
   # GET /qualifications/new
   def new
     @qualification = Qualification.new
+    @vmilist = Vmilist.all
+    @instrujtory = Instruktor.all
   end
 
   # GET /qualifications/1/edit

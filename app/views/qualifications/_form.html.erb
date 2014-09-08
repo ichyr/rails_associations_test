@@ -12,12 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :vmilist_id %><br>
-    <%= f.number_field :vmilist_id %>
+    <%= f.label "Виберіть вмілість" %><br>
+    <% options = options_from_collection_for_select(@vmilist, 'id', 'name') %>
+    <!-- f.select :project_id, @project_select, :selected => params[:pid]-->
+    <%= f.select :vmilist_id, options %>
   </div>
+
   <div class="field">
     <%= f.label :instruktor_id %><br>
-    <%= f.number_field :instruktor_id %>
+    <%= f.text_field :instruktor_id %>
   </div>
   <div class="field">
     <%= f.label :reason %><br>
