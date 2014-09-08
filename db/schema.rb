@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140908035642) do
+ActiveRecord::Schema.define(version: 20140908064530) do
 
   create_table "instruktors", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "qualifications", force: true do |t|
+    t.integer  "vmilist_id"
+    t.integer  "instruktor_id"
+    t.string   "reason"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

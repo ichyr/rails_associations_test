@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :qualifications
+
   resources :instruktors
 
   resources :vmilists

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vmilist:</strong>
+  <%= @qualification.vmilist_id %>
+</p>
+
+<p>
+  <strong>Instruktor:</strong>
+  <%= @qualification.instruktor_id %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @qualification.reason %>
+</p>
+
+<%= link_to 'Edit', edit_qualification_path(@qualification) %> |
+<%= link_to 'Back', qualifications_path %>

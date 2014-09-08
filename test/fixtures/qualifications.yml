@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vmilist_id: 1
+  instruktor_id: 1
+  reason: MyString
+
+two:
+  vmilist_id: 1
+  instruktor_id: 1
+  reason: MyString
